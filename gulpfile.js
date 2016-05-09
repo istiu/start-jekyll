@@ -1,15 +1,17 @@
-var gulp        = require('gulp'),
-  plumber     = require('gulp-plumber'),
-  browserSync = require('browser-sync'),
-  stylus      = require('gulp-stylus'),
-  uglify      = require('gulp-uglify'),
-  concat      = require('gulp-concat'),
-  jeet        = require('jeet'),
-  rupture     = require('rupture'),
-  koutoSwiss  = require('kouto-swiss'),
-  prefixer    = require('autoprefixer-stylus'),
-  imagemin    = require('gulp-imagemin'),
-  cp          = require('child_process');
+var gulp         = require('gulp'),
+  plumber        = require('gulp-plumber'),
+  browserSync    = require('browser-sync'),
+  stylus         = require('gulp-stylus'),
+  uglify         = require('gulp-uglify'),
+  concat         = require('gulp-concat'),
+  prefixer       = require('autoprefixer-stylus'),
+  imagemin       = require('gulp-imagemin'),
+  cp             = require('child_process'),
+
+  poststylus     = require('poststylus'),
+  sourcemaps     = require('gulp-sourcemaps'),
+  autoprefixer   = require('autoprefixer'),
+  lost           = require('lost');
 
 var messages = {
   jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -46,11 +48,13 @@ gulp.task('browser-sync', ['jekyll-build'], function() {
  * Stylus task
  */
 gulp.task('stylus', function(){
-    gulp.src('src/styl/main.styl')
+  gulp.src('src/styl/main.styl')
     .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(stylus({
-      use:[koutoSwiss(), prefixer(), jeet(),rupture()],
-      compress: true
+      use: [
+        poststylus(['lost', 'autoprefixer', 'rucksack-css'])
+      ]
     }))
     .pipe(gulp.dest('_site/assets/css/'))
     .pipe(browserSync.reload({stream:true}))
