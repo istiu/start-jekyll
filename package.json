@@ -1,5 +1,5 @@
 {
-  "name": "startjekyll",
+  "name": "start-wp",
   "version": "1.0.0",
   "description": "Start jekyll project.",
   "main": "gulpfile.js",
@@ -18,6 +18,7 @@
   "author": "Robert Jonathan",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^6.3.6",
     "autoprefixer-stylus": "^0.4.0",
     "browser-sync": "^1.9.0",
     "grunt": "^0.4.5",
@@ -25,10 +26,22 @@
     "gulp-concat": "^2.4.3",
     "gulp-imagemin": "^2.1.0",
     "gulp-plumber": "^0.6.6",
+    "gulp-sourcemaps": "^1.6.0",
     "gulp-stylus": "^1.3.7",
     "gulp-uglify": "^1.0.2",
-    "jeet": "^6.1.2",
     "kouto-swiss": "^0.11.6",
+    "lost": "^6.7.2",
+    "poststylus": "^0.2.3",
+    "rucksack-css": "^0.8.6",
     "rupture": "^0.6.1"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:istiu/start-jekyll.git"
+  },
+  "bugs": {
+    "url": "https://github.com/istiu/start-jekyll/issues"
+  },
+  "homepage": "https://github.com/istiu/start-jekyll#readme"
 }
