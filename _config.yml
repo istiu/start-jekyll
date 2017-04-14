@@ -1,17 +1,10 @@
 # Site settings
-description: Starter project with jekyll
+description: Promoção Tadeu Santigado te da um carro.
 baseurl: ""
 url: ""
 
 # User settings
-username: Start Jekyll
-user_description: Default project to start with Jekyll
-user_title: Default project to start with Jekyll
-email: email@email.com
-twitter_username: lorem_ipsum
-github_username:  lorem_ipsum
-gplus_username:  lorem_ipsum
-disqus_username: lorem_ipsum
+username: Tadeu Santiago
 
 # Build settings
 markdown: kramdown
@@ -25,18 +18,6 @@ compress_html:
   comments: all
   endings: []
   profile: false
-
-# Links to include in menu navigation
-# For external links add external: true
-links:
-  - title: Home
-    url: /
-  - title: Series
-    url: /series
-  - title: Tags
-    url: /tags
-  - title: About Me
-    url: /about
 
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules']

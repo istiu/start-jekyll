@@ -1,9 +1,27 @@
-<header class="header-site" role="banner">
-  <div class="content">
-    <h1>Start Jekyll</h1>
-    <h2>Base project to start with jekyll.</h2>
-  </div>
+<div class="container">
+  <header class="header-site" role="banner">
+    <a href="/" class="logo">
+      <img src="{{site.url}}/assets/img/logo.png" alt="Tadeu Santigado Imóveis" class="img-responsive img-responsive__center">
+    </a>
 
-  <a role="button" class="down" data-scroll href="#scroll"><svg class="icon icon-angle-down"><use xlink:href="#icon-angle-down"></use></svg></a>
-  {% include menu-search.html %}
-</header>
+    <ul class="menu-header">
+      <li class="menu-header__item">
+        <a href="https://www.facebook.com/tadeusantiagoimoveis/" target="_blank">
+          <svg class="menu-header__icon">
+            <use xlink:href="#icon-facebook"></use>
+          </svg>
+        </a>
+      </li>
+
+      <li class="menu-header__item">
+        <a href="https://www.instagram.com/tadeusantiagoimoveis/" target="_blank">
+          <svg class="menu-header__icon">
+            <use xlink:href="#icon-instagram"></use>
+          </svg>
+        </a>
+      </li>
+
+      <li><a href="/regulamento">Regulamento da promoção</a></li>
+    </ul>
+  </header>
+</div><!-- /container -->
